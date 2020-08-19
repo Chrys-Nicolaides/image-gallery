@@ -6,7 +6,7 @@ I followed [this](https://www.youtube.com/watch?v=FiGmAI5e91M) tutorial by Brad 
 It was really fun, I enjoy his work and teaching style!
 
 
-## In this exercise I aimed to learn more about 📚
+## In this exercise I aimed to learn more about: 📚
 * create-react-app
 * fetch requests
 * useState
