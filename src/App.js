@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `http://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo`
+      `/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -21,10 +21,14 @@ function App() {
       .catch((err) => console.log(err));
   }, [term]);
 
+  const functionToUpdateSearchText = (text) => {
+    setTerm(text);
+  };
+
   return (
-    <div>
+    <div className=" bg-gray-800">
       <div className="container mx-auto">
-        <ImageSearch searchText={(text) => setTerm(text)} />
+        <ImageSearch searchText={functionToUpdateSearchText} />
 
         {!isLoading && images.length === 0 && (
           <h1 className="text-4xl text-center text-gray-900 mx-auto">
