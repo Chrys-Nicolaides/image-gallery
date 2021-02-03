@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-700 to-gray-900">
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900 px-40 pb-24 overflow-x-hidden">
       <div className="container mx-auto">
         <ImageSearch searchText={functionToUpdateSearchText} />
 
@@ -39,10 +39,12 @@ function App() {
         {isLoading ? (
           <h1 className="text-4xl text-center mx-auto mt-32">Loading...</h1>
         ) : (
-          <div className="grid grid-cols-3 gap-4">
-            {images.map((image) => (
-              <ImageCard key={image.id} image={image} />
-            ))}
+          <div className="bg-gray-700 rounded-3xl px-16 py-16">
+            <div className="grid grid-cols-3 gap-x-8 gap-y-11">
+              {images.map((image) => (
+                <ImageCard key={image.id} image={image} />
+              ))}
+            </div>
           </div>
         )}
       </div>

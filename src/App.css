@@ -1,0 +1,7 @@
+.linear-gradient {
+  background-image: linear-gradient(
+    to right,
+    hsla(259, 29%, 54%, 0.25),
+    hsl(353, 35%, 47%)
+  );
+}

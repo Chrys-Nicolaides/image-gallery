@@ -16,33 +16,34 @@ const ImageSearch = (props) => {
   return (
     <div>
       <h2
-        className="text-gray-700 text-opacity-50 text-9xl font-bold -my-6 px-100 text-right tracking-wider
+        className="text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-12 px-100 text-right min-w-max
       "
       >
         Media Gallery.
       </h2>
-      <div className="flex justify-center">
-        <div className="w-80 h-20 bg-gradient-to-r from-purple-800 to-red-400 opacity-50"></div>
+      <div className="flex justify-center flex-nowrap align-center self-center -mt-28">
+        <div className="linear-gradient flex justify-center h-24 min-w-min mb-4">
+          <h1 className="text-white flex justify-center text-8xl font-bold text-center opacity-1 -mt-1">
+            Media Gallery.
+          </h1>
+        </div>
       </div>
-      <h1 className="text-white justify-center display-flex text-8xl font-bold text-center -my-6">
-        Media Gallery.
-      </h1>
-      <div className="pt-10 mb-10 text-white grid grid-cols-3 gap-4">
+      <div className="mt-24 mb-20 grid grid-cols-3 gap-4">
         <form
           onSubmit={onSubmit}
-          className="col-start-2 ml-8 border-4 border-gray-600 rounded-full"
+          className="col-start-2 ml-8 border-4 border-gray-600 rounded-full hover:border-gray-500 hover:bg-gray-800"
         >
-          <div className="text-gray-300 py-2 flex justify-center align-enter">
+          <div className="text-gray-500 py-2 flex justify-center align-enter">
             <input
               onChange={handleChange}
-              className="mx-8 text-base font-medium placeholder-gray-100 appearance-none bg-transparent border-none w-full font-normal text-gray-300 mr-3 py-1 px-2 leading-tight focus:outline-none"
+              className="mx-8 text-base font-medium placeholder-gray-500 text-gray-300 appearance-none bg-transparent border-none w-full font-normal mr-3 py-1 px-2 leading-tight focus:outline-none"
               type="text"
-              placeholder="Search Images Here"
+              placeholder="Search images here"
             />
-            <div className="flex align-center mx-8">
+            <div className="flex align-center mx-8 mt-1">
               <svg
-                width="25px"
-                height="24px"
+                width="22px"
+                height="22px"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
