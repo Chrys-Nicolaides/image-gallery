@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className=" bg-gray-800">
+    <div className="bg-gradient-to-br from-gray-700 to-gray-900">
       <div className="container mx-auto">
         <ImageSearch searchText={functionToUpdateSearchText} />
 
