@@ -4,7 +4,7 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(",");
 
   return (
-    <div className="max-w-lg rounded-lg overflow-hidden shadow-lg mt-8 ml-8 bg-gray-900">
+    <div className="max-w-lg rounded-3xl overflow-hidden shadow-lg mt-8 ml-8 bg-gray-900">
       <img src={image.webformatURL} alt="" className="w-full" />
       <div className="px-6 py-4 text-gray-500">
         <div className="font-bold text-gray-100 text-xl mb-2">
@@ -25,7 +25,7 @@ const ImageCard = ({ image }) => {
           </li>
         </ul>
       </div>
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 flex align-center">
         {tags.map((tag, index) => (
           <span
             key={index}
