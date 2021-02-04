@@ -16,10 +16,10 @@ const ImageSearch = (props) => {
   return (
     <div>
       <h2
-        className="text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-12 px-100 text-right min-w-max
+        className="text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-52 px-100 text-right min-w-max z-50 overflow-visible
       "
       >
-        Media Gallery.
+        Media Gallery
       </h2>
       <div className="flex justify-center flex-nowrap align-center self-center -mt-28">
         <div className="linear-gradient flex justify-center h-24 min-w-min mb-4">
