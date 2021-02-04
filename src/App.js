@@ -4,7 +4,7 @@ import ImageSearch from "./components/ImageSearch";
 
 function App() {
   const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [term, setTerm] = useState("");
 
   console.log(process.env.REACT_APP_PIXABAY_API_KEY);
@@ -22,31 +22,38 @@ function App() {
   }, [term]);
 
   const functionToUpdateSearchText = (text) => {
+    setIsLoading(true);
     setTerm(text);
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-800 to-gray-900 px-40 pb-24 overflow-x-hidden">
-      <div className="container mx-auto">
-        <ImageSearch searchText={functionToUpdateSearchText} />
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900 overflow-x-hidden z-0">
+      <div className="scrollbar-container bg-transparent m-4 z-0">
+        <div className="container mx-auto">
+          <ImageSearch searchText={functionToUpdateSearchText} />
 
-        {!isLoading && images.length === 0 && (
-          <h1 className="text-4xl text-center text-gray-900 mx-auto">
-            No Images Found :(
-          </h1>
-        )}
-
-        {isLoading ? (
-          <h1 className="text-4xl text-center mx-auto mt-32">Loading...</h1>
-        ) : (
-          <div className="bg-gray-700 rounded-3xl px-16 py-16">
-            <div className="grid grid-cols-3 gap-x-8 gap-y-11">
-              {images.map((image) => (
-                <ImageCard key={image.id} image={image} />
-              ))}
+          {isLoading ? (
+            <div className="second-container bg-gray-700 rounded-3xl shadow-sm mx-40 mb-20">
+              <h1 className="text-3xl text-center text-gray-300 p-24">
+                Loading...
+              </h1>
             </div>
-          </div>
-        )}
+          ) : images.length > 0 ? (
+            <div className="second-container bg-gray-700 rounded-3xl shadow-sm mx-40 mb-20">
+              <div className="grid grid-cols-3 gap-x-8 gap-y-11 px-16 py-16">
+                {images.map((image) => (
+                  <ImageCard key={image.id} image={image} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="second-container bg-gray-700 rounded-3xl shadow-sm mx-40 mb-20">
+              <h1 className="text-3xl text-center text-gray-300 p-24">
+                No images found :(
+              </h1>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

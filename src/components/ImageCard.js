@@ -6,16 +6,16 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(",");
 
   return (
-    <div className="max-w-xs rounded-3xl overflow-hidden shadow-xl bg-gradient-to-b from-gray-700 to-gray-800">
+    <div className="max-w-xs rounded-3xl overflow-hidden shadow-md bg-gradient-to-b from-gray-700 to-gray-800">
       <img src={image.webformatURL} alt="" className="w-full" />
-      <div className="px-6 py-4 text-gray-500">
+      <div className="px-6 py-4">
         <div className="font-medium text-gray-500 text-sm mt-2">Photo by</div>
         <div className="font-bold text-gray-100 text-2xl mb-8">
           {image.user}
         </div>
         <div className="border-b-2 border-gray-600 mb-8"></div>
         <ul className="text-sm flex space-x-9">
-          <div>
+          <div className="text-gray-500">
             <li className="flex items-center">
               <svg
                 className="text-gray-400"
@@ -40,16 +40,16 @@ const ImageCard = ({ image }) => {
                   d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                 ></path>
               </svg>
-              <strong className="ml-1.5"></strong>
+              <strong className="ml-1.5 "></strong>
               {image.views}
-              <strong className="font-normal ml-1.5">views</strong>
+              <strong className="font-normal ml-1.5 ">views</strong>
             </li>
           </div>
           {/* <li>
             <strong>Downloads: </strong>
             {image.downloads}
           </li> */}
-          <div className="-ml-20">
+          <div className="-ml-20 text-gray-500">
             <li className="flex items-center">
               <svg
                 className="text-gray-400"

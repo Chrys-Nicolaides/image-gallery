@@ -1,7 +1,40 @@
+body {
+  overflow-y: hidden;
+}
+
+.scrollbar-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  background: transparent;
+}
+
 .linear-gradient {
   background-image: linear-gradient(
     to right,
     hsla(259, 29%, 54%, 0.25),
     hsl(353, 35%, 47%)
   );
+}
+
+.scrollbar-container::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+.scrollbar-container::-webkit-scrollbar-track {
+  background-color: #52525b;
+  margin-bottom: 80px;
+  margin-top: 230px;
+  border-radius: 0.5rem;
+}
+
+.scrollbar-container::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(0, 91%, 71%),
+    hsl(259, 76%, 71%)
+  );
+  height: 120px;
+  border-radius: 0.5rem;
 }
