@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Icon from "./icon.svg";
+import SearchIcon from "./searchIcon.svg";
 
 const ImageSearch = (props) => {
   const [text, setText] = useState("");
