@@ -16,14 +16,14 @@ const ImageSearch = (props) => {
   return (
     <div>
       <h2
-        className="text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-52 px-100 text-right min-w-max z-50 overflow-visible
+        className="text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-56 px-100 text-right min-w-max z-50 overflow-visible
       "
       >
         Media Gallery
       </h2>
       <div className="flex justify-center flex-nowrap align-center self-center -mt-28">
-        <div className="linear-gradient flex justify-center h-24 min-w-min mb-4">
-          <h1 className="text-white flex justify-center text-8xl font-bold text-center opacity-1 -mt-1">
+        <div className="linear-gradient flex justify-center h-24 min-w-min mb-4 px-1">
+          <h1 className="text-white flex justify-center text-8xl font-bold text-center opacity-1 -mt-">
             Media Gallery.
           </h1>
         </div>
@@ -36,7 +36,7 @@ const ImageSearch = (props) => {
           <div className="text-gray-500 py-2 flex justify-center align-enter">
             <input
               onChange={handleChange}
-              className="mx-8 text-base font-medium placeholder-gray-500 text-gray-300 appearance-none bg-transparent border-none w-full font-normal mr-3 py-1 px-2 leading-tight focus:outline-none"
+              className="mx-8 text-base font-medium placeholder-gray-400 hover:text-gray-300 text-gray-300 appearance-none bg-transparent border-none w-full font-normal mr-3 py-1 px-2 leading-tight focus:outline-none"
               type="text"
               placeholder="Search images here"
             />
