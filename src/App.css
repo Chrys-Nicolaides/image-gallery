@@ -6,13 +6,14 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
-  background: transparent;
+  background-color: transparent;
+  z-index: 0;
 }
 
 .linear-gradient {
   background-image: linear-gradient(
     to right,
-    hsla(259, 29%, 54%, 0.25),
+    hsla(259, 29%, 54%, 0.4),
     hsl(353, 35%, 47%)
   );
 }
@@ -37,4 +38,9 @@ body {
   );
   height: 120px;
   border-radius: 0.5rem;
+}
+
+h2 {
+  z-index: 10000;
+  overflow: visible;
 }

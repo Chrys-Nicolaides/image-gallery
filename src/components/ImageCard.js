@@ -75,7 +75,7 @@ const ImageCard = ({ image }) => {
           </div>
         </ul>
       </div>
-      <div className="px-6 py-4 flex align-center items-center mt-2 mb-2">
+      <div className="px-6 py-4 mt-2 mb-2">
         {tags.map((tag, index) => (
           <span
             key={index}
