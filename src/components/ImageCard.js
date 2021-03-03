@@ -1,6 +1,6 @@
 import React from "react";
-import SearchIcon from "./searchIcon.svg";
-import ViewIcon from "./viewIcon.svg";
+// import SearchIcon from "./searchIcon.svg";
+// import ViewIcon from "./viewIcon.svg";
 
 const ImageCard = ({ image }) => {
   const tags = image.tags.split(",");
@@ -45,10 +45,7 @@ const ImageCard = ({ image }) => {
               <strong className="font-normal ml-1.5 ">views</strong>
             </li>
           </div>
-          {/* <li>
-            <strong>Downloads: </strong>
-            {image.downloads}
-          </li> */}
+
           <div className="-ml-20 text-gray-500">
             <li className="flex items-center">
               <svg
