@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import SearchIcon from "./searchIcon.svg";
 
 const ImageSearch = (props) => {
   const [text, setText] = useState("");
@@ -16,14 +15,14 @@ const ImageSearch = (props) => {
   return (
     <div>
       <h2
-        className="huh-box text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-44 text-right min-w-max z-50 overflow-visible
+        className="text-gray-700 text-opacity-50 text-10xl font-bold -my-10 ml-44 text-right min-w-max z-50 overflow-visible
       "
       >
         Media Gallery
       </h2>
       <div className="flex justify-center flex-nowrap align-center self-center -mt-28">
         <div className="linear-gradient flex justify-center h-24 min-w-min mb-4 px-1">
-          <h1 className="text-white flex justify-center text-8xl font-bold text-center opacity-1 -mt-1">
+          <h1 className="text-white flex justify-center text-8xl font-bold text-center opacity-100 -mt-1">
             Media Gallery.
           </h1>
         </div>
